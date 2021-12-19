@@ -14,7 +14,7 @@ export default function SingleShirt() {
     }, [])
     return (
         <div>
-            single shirt
+          <p>  ${singleShirt.team} </p>
         </div>
     )
 }
