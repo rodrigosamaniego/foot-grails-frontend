@@ -3,7 +3,7 @@
 import { useReducer } from "react";
 import ShirtContext from "./ShirtContext";
 import ShirtReducer from "./ShirtReducer"
-import axiosClient from "../../config/axios";
+import axiosClient from "./../../config/axios";
 
 const ShirtSate = (props) => {
 
@@ -37,9 +37,9 @@ const ShirtSate = (props) => {
     }
 
     const getShirt = async (shirtId) => {
-        console.log(shirtId)
+        
 
-        const res = await axiosClient.get(`shirt/readone/${shirtId}`)
+        const res = await axiosClient.get(`shirts/readone/${shirtId}`)
 
         console.log(res)
 
@@ -69,6 +69,12 @@ const ShirtSate = (props) => {
             type: "UPDATE_SHIRT",
             payload: updatedShirt
         })
+        
+    }
+
+    const deleteShirt = async (idShirt) => {
+        
+        const res = await axiosClient.delete(`shirts/delete/${idShirt}`)
     }
 
     //Return
@@ -76,11 +82,12 @@ const ShirtSate = (props) => {
         <ShirtContext.Provider
             value={{
                 shirts: globalState.shirts,
-                singleShirt: globalState.shirts,
+                singleShirt: globalState.singleShirt,
                 getShirts,
                 getShirt,
                 createShirt,
-                updateShirt
+                updateShirt,
+                deleteShirt
             }}
             >
                 {props.children}

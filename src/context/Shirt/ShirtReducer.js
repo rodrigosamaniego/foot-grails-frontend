@@ -8,7 +8,7 @@ const reducer = (globalState, action) => {
         case "UPDATE_SHIRT":
             return {
                 ...globalState,
-                guitars: action.payload
+                singleShirt: action.payload
             }
         case "GET_SHIRTS":
             return {
