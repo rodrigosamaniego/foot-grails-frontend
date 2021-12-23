@@ -3,12 +3,15 @@ import React, {useState, useContext} from "react";
 import { Link } from "react-router-dom";
 import UserContext from "../../context/User/UserContext";
 
+
 export default function Register() {
 
     const ctx = useContext(UserContext)
 
     const{
-        registerUser
+        registerUser,
+		errorMessage,
+		
     } = ctx
 
     const [newUser, setNewUser] = useState({
@@ -36,13 +39,13 @@ export default function Register() {
     return (
 		<div className="flex flex-col justify-center py-12 sm:px-6 lg:px-8">
 			<div className="sm:mx-auto sm:w-full sm:max-w-md">
-				<img className="mx-auto h-12 w-auto" src="https://cdn.worldvectorlogo.com/logos/ironhack-1.svg" />
+				<img className="mx-auto h-12 w-auto" src="https://image.flaticon.com/icons/png/512/118/118997.png" />
 				<h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-					Crea tu cuenta
+					Create an account
 				</h2>
 				<p className="mt-2 text-center text-sm text-gray-600">
 					Already have an account? &nbsp;
-					<Link to="/iniciar-sesion">
+					<Link to="/login">
 						<a className="font-medium text-yellow-500 hover:text-yellow-300">
 							Log in.
 						</a>
@@ -122,8 +125,18 @@ export default function Register() {
 							</div>
 						</div>
 
+						{
+							errorMessage ? 
+							
+							<p>{errorMessage}</p>
+							:
+							null
+						}
+
+
+
 						<div>
-							<button type="submit" className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-500 hover:bg-blue-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+							<button type="submit" className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-500 hover:bg-indigo-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
 								Create your account
 							</button>
 						</div>

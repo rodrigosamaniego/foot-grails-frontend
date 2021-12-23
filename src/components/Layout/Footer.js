@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function Footer() {
 	return (
-	<div class="h-10 bg-blue-500">
-      <footer className="bg-white">
+	<div class="h-10 bg-black">
+      <footer className="bg-black">
         <div className="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
         
           <div className="mt-8 flex justify-center space-x-6">
@@ -30,10 +30,10 @@ export default function Footer() {
 
           </div>
           <p className="mt-8 text-center text-base text-gray-400">
-            &copy; 2021. Todos los derechos reservados.
+            &copy; 2021.
           </p>
           <p className="text-center text-base text-gray-400">
-            Esta es una tienda electrónica ficticia con objetivos académicos y de aprendizaje.
+            Foot Grails. Mexico City, Mexico
           </p>
         </div>
       </footer>

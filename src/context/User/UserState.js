@@ -15,7 +15,8 @@ const UserState = (props) => {
             admin: "",
             password: ""
         },
-        authStatus: false
+        authStatus: false, 
+        errorMessage: ""
     }
     //Reducer config
     const [globalState, dispatch] = useReducer(UserReducer, initialState)
@@ -25,7 +26,19 @@ const UserState = (props) => {
 
         const res = await axiosClient.post("users/create", form)
 
-        console.log(res)
+        console.log(res.data.errorMessage)
+
+        
+
+        if(res.data.errorMessage){
+            dispatch({
+                type: "ERROR_MESSAGE",
+                payload: res.data.errorMessage
+            })
+            return
+        }
+
+       
 
         const token = res.data.data
 
@@ -92,9 +105,12 @@ const UserState = (props) => {
                 registerUser,
                 loginUser,
                 verifyingToken,
-                logoutUser
+                logoutUser,
+                errorMessage: globalState.errorMessage
             }}
+            
         >
+            {props.children}
 
         </UserContext.Provider>
         

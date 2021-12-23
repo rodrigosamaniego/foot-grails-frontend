@@ -54,14 +54,14 @@ const ShirtSate = (props) => {
     }
 
     const createShirt = async (form) => {
-        const res = await axiosClient.post("shirts/create", form)
+        const res = await axiosClient.post("shirts/create", form, window.location.replace("/shirts"))
         console.log(res)
         
     }
 
     const updateShirt = async (form, idShirt) => {
 
-        const res = await axiosClient.put(`shirts/edit/${idShirt}`, form)
+        const res = await axiosClient.put(`shirts/edit/${idShirt}`, form, window.location.replace(`/shirts/${idShirt}`))
 
         const updatedShirt = res.data.data
 
@@ -74,7 +74,7 @@ const ShirtSate = (props) => {
 
     const deleteShirt = async (idShirt) => {
         
-        const res = await axiosClient.delete(`shirts/delete/${idShirt}`)
+        const res = await axiosClient.delete(`shirts/delete/${idShirt}`, window.location.replace("/shirts")) 
     }
 
     //Return

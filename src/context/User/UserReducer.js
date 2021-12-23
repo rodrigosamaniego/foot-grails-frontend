@@ -28,6 +28,17 @@ const reducer = (globalState, action) => {
                 authStatus: true,
                 currentUser: action.payload
             }
+        case "ERROR_MESSAGE":
+            return {
+                ...globalState,
+                errorMessage: action.payload
+            }
+
+        case "ERROR_USER_MESSAGE":
+            return {
+                ...globalState,
+                errorUserMessage: action.payload
+            }
 
         default: 
             return globalState

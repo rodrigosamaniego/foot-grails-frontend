@@ -1,13 +1,27 @@
 import React, {useState, useContext} from "react";
 import ShirtContext from "../../context/Shirt/ShirtContext";
+import UserContext from "../../context/User/UserContext";
+import { useNavigate} from "react-router-dom";
 
 export default function CreateShirt() {
+
+	const navigate = useNavigate()
 
     //Estado Global
     const ctx = useContext(ShirtContext)
     const {
         createShirt
     } = ctx
+
+	const ctxUser = useContext(UserContext)
+	const {
+		currentUser
+	}=ctxUser
+
+	if(!currentUser.admin){
+	 navigate("/")
+		
+	}
 
     //Estado Local
     const [newShirt, setNewShirt] = useState({
