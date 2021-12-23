@@ -39,7 +39,7 @@ export default function AboutUs() {
         <div class="text-base max-w-prose mx-auto lg:max-w-none">
           <p class="mt- 6 text-lg text-gray-500">A football shirt works in many dimensions. It can be a hommage to a beloved player or team. It can take you back in time to a particular trend. It can give symbolic value through its design and colors. We are convinced that a football shirt is always worn with intentionality. It always carries meaning behind it. </p>
         </div>
-        <div class="mt-5 prose prose-indigo text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1">
+        <div class="text-base max-w-prose mx-auto lg:max-w-none">
           <p class="mt-6 text-lg text-gray-500">We created Foot Grails to celebrate footbal shirts. Although, we love the beatiful game, this shirts are not only for football fanatics nor men. They are pieces for people of all genders, fashion ethusiasts, design lovers and everyone who is trying to express themself through clothing.  </p>
         </div>
         <div class="mt-5 prose prose-indigo text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1">

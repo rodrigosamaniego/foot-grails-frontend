@@ -168,7 +168,7 @@ export default function EditShirt() {
 							</div>
 
                             <div class="col-span-6 sm:col-span-6 lg:col-span-4">
-								<label for="city" class="block text-sm font-medium text-gray-700">Image</label>
+								<label for="city" class="block text-sm font-medium text-gray-700">Image URL</label>
 								<textarea 
 									onChange={ (event) => { handleChange(event) } } 
 									type="text" 
