@@ -1,4 +1,5 @@
 import React, {useContext} from "react";
+import { Link } from "react-router-dom";
 
 export default function Home (){
     return (
@@ -14,7 +15,8 @@ export default function Home (){
           </div>
           <div class="mt-20">
             <div>
-              <a href="/shirts" class="inline-flex space-x-4">
+              <Link to="/shirts">  <a className="inline-flex space-x-4">
+                
               
                 <span class="inline-flex items-center text-sm font-medium text-black hover:text-gary-50">
                   <span>Go to shirts</span>
@@ -23,7 +25,10 @@ export default function Home (){
                     <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
                   </svg>
                 </span>
-              </a>
+                </a>
+                </Link>
+                
+              
             </div>
             <div class="mt-6 sm:max-w-xl">
               <h1 class="text-4xl font-extrabold text-gray-900 tracking-tight sm:text-5xl">
@@ -165,9 +170,10 @@ export default function Home (){
               </div>
             </dl>
             <div class="mt-10">
-              <a href="/about-us" class="text-base font-medium text-black-500">
+              <Link to="/about-us"> <a className="text-base font-medium text-black-500">
                 About us&rarr;
               </a>
+              </Link>
             </div>
           </div>
         </div>
