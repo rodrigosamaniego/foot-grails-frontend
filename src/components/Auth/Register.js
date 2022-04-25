@@ -39,7 +39,7 @@ export default function Register() {
     return (
 		<div className="flex flex-col justify-center py-12 sm:px-6 lg:px-8">
 			<div className="sm:mx-auto sm:w-full sm:max-w-md">
-				<img className="mx-auto h-12 w-auto" src="https://image.flaticon.com/icons/png/512/118/118997.png" />
+				<img className="mx-auto h-12 w-auto" src="https://www.emozionat.com/wp-content/uploads/2021/01/equipaciones.png" />
 				<h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
 					Create an account
 				</h2>

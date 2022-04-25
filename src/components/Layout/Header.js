@@ -29,7 +29,7 @@ export default function Header() {
 					
 
 						<Link to="/">
-							<img className="h-10 w-auto" src="https://image.flaticon.com/icons/png/512/118/118997.png" alt="" />
+							<img className="h-10 w-auto" src="https://www.emozionat.com/wp-content/uploads/2021/01/equipaciones.png" alt="" />
 						</Link>
 						<div className="ml-10 space-x-8 lg:block">
 						

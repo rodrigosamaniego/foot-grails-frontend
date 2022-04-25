@@ -11,7 +11,7 @@ export default function Home (){
       <div class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl lg:grid lg:grid-cols-2 lg:gap-24">
         <div>
           <div>
-            <img class="h-11 w-auto" src="https://image.flaticon.com/icons/png/512/118/118997.png" alt="Workflow"/>
+            <img class="h-11 w-auto" src="https://www.emozionat.com/wp-content/uploads/2021/01/equipaciones.png" alt="Workflow"/>
           </div>
           <div class="mt-20">
             <div>
